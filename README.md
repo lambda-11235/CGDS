@@ -72,8 +72,11 @@ for example usage.
 
 One may wonder why I designed the library so that the user has to do the
 slightly inconvenient macro handling across a header and implementation file.
-Consider the two main alternative ways of doing generics in C. The first is to
-use `void*` for data types. The other is to define it like
+First I wanted to implement the data structures with an unobtrusive design, so
+common intrusive designs were disqualified (if you want intrusive see
+[https://github.com/graphitemaster/libintrusive](https://github.com/graphitemaster/libintrusive)).
+Consider the two other main alternative ways of doing unobtrusive generics in C.
+The first is to use `void*` for data types. The other is to define it like
 ```c
 #define IMPLEMENT(TYPE) \
 struct foo_##TYPE { \
