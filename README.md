@@ -1,6 +1,12 @@
 
 # C Generic Data Structures (CGDS)
 
+This is yet another attempt at implementing generics in C. The main focus of
+this library is on building reusable core data structures, such as AVL trees,
+hash tables, etc, and not on ADTs, such as maps, sets, etc. The hope is that the
+data structures will have a generic enough implementation that using them as the
+building blocks of higher level ADTs will be relatively trivial.
+
 ## Usage
 
 Let's say we want to use a generic data structure `foo` for several types `boo`,
