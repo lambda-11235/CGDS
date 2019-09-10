@@ -1,6 +1,6 @@
 
-#ifndef GENERIC_H
-#define GENERIC_H
+#ifndef CGDS_GENERIC_H
+#define CGDS_GENERIC_H
 
 
 #define GENERIC_ERROR_MSG(MACRO) "Expected macro " #MACRO " to be defined"
@@ -19,4 +19,4 @@
 #define XMETH(TYPE, FUNC) TYPE ## _ ## FUNC
 
 
-#endif /* end of include guard: GENERIC_H */
+#endif /* end of include guard: CGDS_GENERIC_H */

@@ -2,8 +2,8 @@
 #include <stdbool.h>
 
 
-#ifndef AVL_COMMON
-#define AVL_COMMON
+#ifndef CGDS_AVL_COMMON
+#define CGDS_AVL_COMMON
 
 
 #define TYPE bool
@@ -74,5 +74,5 @@
 #undef TYPE
 
 
-#endif /* end of include guard: AVL_COMMON */
+#endif /* end of include guard: CGDS_AVL_COMMON */
 

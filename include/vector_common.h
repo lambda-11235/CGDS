@@ -2,8 +2,8 @@
 #include <stdbool.h>
 
 
-#ifndef VECTOR_COMMON
-#define VECTOR_COMMON
+#ifndef CGDS_VECTOR_COMMON
+#define CGDS_VECTOR_COMMON
 
 
 #define TYPE bool
@@ -74,4 +74,4 @@
 #undef TYPE
 
 
-#endif /* end of include guard: VECTOR_COMMON */
+#endif /* end of include guard: CGDS_VECTOR_COMMON */
