@@ -20,11 +20,11 @@
 
 #define AVL_NODE GEN1(avl_node, TYPE_ABBREV)
 struct AVL_NODE {
-    TYPE elem;
-
-    char balance;
     struct AVL_NODE *left;
     struct AVL_NODE *right;
+
+    TYPE elem;
+    char balance;
 };
 
 
