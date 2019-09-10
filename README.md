@@ -188,7 +188,9 @@ int METH(FOO, method)(struct FOO *vec, ...) {
 }
 
 // Helper functions should be declared static if used.
-static ret_type helper(...) {
+// Must use METH in case the user wants to include multiple implementations in
+// a single file.
+static ret_type METH(FOO, helper)(...) {
 }
 ```
 
