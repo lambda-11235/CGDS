@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{commath}
+\usepackage{mathtools}
+
+
+% For multipage align*
+\allowdisplaybreaks
+
+
+\title{AVL maths}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Rotation}
+
+For left rotation, where $X$ and $Y$ are the balance of nodes, and $a$, $b$, and
+$c$ are the heights of subnodes.
+
+\begin{verbatim}
+  X
+ / \
+a   Y
+   / \
+  b   c
+\end{verbatim}
+
+\begin{verbatim}
+    Y'
+   / \
+  X'  c
+ / \
+a   b
+\end{verbatim}
+
+\begin{align*}
+    X &= \max(b,c) + 1 - a\\
+    Y &= c - b\\
+    \\
+    X' &= b - a\\
+    Y' &= c - (\max(a,b) + 1)\\
+    \\
+    X &= \max(b,c) + 1 - a\\
+    -a &= X - \max(b,c) - 1\\
+    -a &= X + \min(-b,-c) - 1\\
+    b - a &= X + \min(0,b-c) - 1\\
+    b - a &= X + \min(0,-Y) - 1\\
+    X' &= X - \max(0,Y) - 1\\
+    \\
+    Y' &= c - \max(a,b) - 1\\
+    Y' - b &= c - b - \max(a,b) - 1\\
+    Y' - b &= Y - \max(a,b) - 1\\
+    Y' - b &= Y + \min(-a,-b) - 1\\
+    Y' &= Y + \min(b-a,0) - 1\\
+    Y' &= Y + \min(X',0) - 1
+\end{align*}
+
+For right rotation we simply get
+
+\begin{align*}
+    X &= X' + \max(0,Y) + 1\\
+    Y &= Y' - \min(X',0) + 1
+\end{align*}
+
+\end{document}

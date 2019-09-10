@@ -12,13 +12,17 @@ int main(int argc, char *argv[])
 
     assert(!vector_int_init(&vec));
 
-    for (x = 0; x < 100; x++)
+    for (x = 0; x < 100; x++) {
+        printf("x = %d\n", x);
         assert(!vector_int_push(&vec, x));
+    }
 
     assert(vec.length == 100);
 
-    for (i = 0; i < 100; i++)
+    for (i = 0; i < 100; i++) {
+        printf("i = %d\n", i);
         assert(i == *vector_int_index(&vec, i));
+    }
 
     i = 65;
     x = 1345;
@@ -33,6 +37,7 @@ int main(int argc, char *argv[])
 
     for (i = 0; i < 100; i++) {
         assert(!vector_int_pop(&vec, &x));
+        printf("i = %d, x = %d\n", i, x);
         assert(100 - i - 1 == x);
     }
 
