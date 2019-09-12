@@ -11,7 +11,6 @@
 
 // This is an abbreviation of the type name.
 // The vector will be declared as `struct vector_TYPE_ABBREV`.
-// Defaults to TYPE, and should only be used for pointers.
 #ifndef TYPE_ABBREV
 #error "Expected macro TYPE_ABBREV to be defined"
 #endif

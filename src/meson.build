@@ -1,5 +1,5 @@
 
-srcs = ['avl_common.c', 'vector_common.c']
+srcs = ['avl_common.c', 'hashtable_common.c', 'vector_common.c']
 
 shlib = shared_library('cdgs', srcs,
   install : true,

@@ -326,3 +326,7 @@ static bool METH(AVL, delete_node)(struct AVL_NODE **top, struct AVL_NODE *node,
 bool METH(AVL, delete)(struct AVL *avl, TYPE key, TYPE *elem) {
     return METH(AVL, delete_node)(&avl->root, avl->root, key, elem);
 }
+
+
+#undef AVL
+#undef AVL_NODE
